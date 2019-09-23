@@ -31,11 +31,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'javax.inject:javax.inject:1'
 
-    // Use JUnit Jupiter API for testing.
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testImplementation(enforcedPlatform("org.junit:junit-bom:5.4.0")) // JUnit 5 BOM
+    testImplementation("org.junit.jupiter:junit-jupiter")
 
-    // Use JUnit Jupiter Engine for testing.
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 application {

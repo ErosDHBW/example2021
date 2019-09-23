@@ -20,4 +20,7 @@ public class UserInterface {
        log.info(this.greetingService.getGreeting(name));
     }
 
+    public String returnGreeting(String name) {
+        return this.greetingService.getGreeting(name);
+    }
 }
